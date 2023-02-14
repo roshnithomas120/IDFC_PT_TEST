@@ -1,0 +1,1270 @@
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": [
+					{
+						"name": "primary_color_border",
+						"href": "/api/catalog/accounts/60073/account_preferences/primary_color_border",
+						"kind": "self_service#account_preference",
+						"value": "#476189",
+						"GroupName": "portal_customization"
+					},
+					{
+						"name": "secondary_color_border",
+						"href": "/api/catalog/accounts/60073/account_preferences/primary_color_border",
+						"kind": "self_service#account_preference",
+						"value": "#476189",
+						"GroupName": "portal_customization"
+					},
+					{
+						"name": "ternary_color_border",
+						"href": "/api/catalog/accounts/60073/account_preferences/primary_color_border",
+						"kind": "self_service#account_preference",
+						"value": "#476189",
+						"GroupName": "portal_customization"
+					}
+				]
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5005,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 5\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5006,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 6\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5007,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 7\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5008,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 8\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5009,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 9\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5010,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 10\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5011,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 11\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5012,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 12\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5013,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 13\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5014,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 14\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5015,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 15\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5002,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 2\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5003,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 3\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5004,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 4\" }"
+			}
+		}]
+	}]
+}'
+curl -X POST \
+ http://mountebank1:5001/imposters \
+ -H 'Content-Type: application/json' \
+ -H 'Postman-Token: 81427c69-45ee-4687-8254-40517d9789e0' \
+ -H 'cache-control: no-cache' \
+ -d '{
+	"port": 5016,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/test"
+			}
+		}],
+		"responses": [{
+			"is": {
+				"statusCode": 200,
+				"headers": {
+					"Content-Type": "application/json"
+				},
+				"body": "{ message: \"hello imposter 16\" }"
+			}
+		}]
+	}]
+}'

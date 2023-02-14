@@ -1,0 +1,70 @@
+version: '3.8'
+networks:
+  web:
+  mountebank:
+x-node: &x-node
+  image: node
+services:
+  web:
+    <<: *x-node
+    image: golang
+    networks:
+      - web
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    healthcheck:
+      test: [ "CMD-SHELL", "curl http://localhost:3000" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cd /usr/src/app/
+        go run microservice1/server.go -b 0.0.0.0
+  mountebank:
+    <<: *x-node
+    networks:
+      - mountebank
+    volumes:
+      - .:/usr/src/app
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cd usr/src/app/microservice2
+        chmod +x run-test.sh
+        chmod +x index.js
+        cd ..
+        ./microservice2/run-test.sh
+    ports:
+      - 5001:5001
+    healthcheck:
+      test: [ "CMD-SHELL", "curl http://mountebank:5001" ]
+      interval: 10s
+      timeout: 50s
+      retries: 5
+  deps-install:
+    <<: *x-node
+    command: ["/bin/bash", "-c", "yarn install"]
+  k6:
+    image: loadimpact/k6:latest
+    networks:
+      - web
+      - mountebank
+    depends_on:
+      web:
+        condition: service_healthy
+      mountebank:
+        condition: service_healthy
+    ports:
+      - "6565:6565"
+    volumes:
+      - ./microservice2:/microservice2
+    command: run /microservice2/sample.js
+
+

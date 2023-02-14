@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "description": "verify pacts provided by RAS go service",
+  "scripts": {
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('Use yarn to install, instead of npm')\"",
+    "mock": "mb --configfile microservice2/imposters.ejs --loglevel debug"
+  },
+  "config": {
+    "pact_do_not_track": true,
+    "pact_binary_location": "https://artifactory.idfcbank.com/github-distributions/pact-foundation/pact-ruby-standalone/releases/download/v1.88.37/"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "babel-plugin-module-resolver": "4.1.0",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "7.1.0",
+    "eslint-import-resolver-babel-module": "5.2.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-module-resolver": "1.2.0",
+    "eslint-plugin-prettier": "3.3.1",
+    "husky": "4.3.7",
+    "lint-staged": "10.5.3",
+    "prettier": "2.2.1"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "7.10.0",
+    "@pact-foundation/pact": "^9.15.0",
+    "axios": "0.21.2",
+    "http-proxy": "^1.18.1",
+    "lodash": "4.17.21",
+    "mountebank": "^2.8.2",
+    "nock": "^13.0.5",
+    "redis": "3.1.1",
+    "node-fetch": "^3.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*/**/*.js": [
+      "prettier --write",
+      "eslint"
+    ]
+  },
+  "name": "y",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}

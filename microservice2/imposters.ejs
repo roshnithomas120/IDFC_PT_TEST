@@ -1,0 +1,87 @@
+{
+  "imposters": [
+    {
+      "port": 18014,
+      "protocol": "http",
+      "name": "sample stub",
+      "recordRequests": true,
+      "stubs": [
+      {
+          "predicates": [
+            {
+              "equals": {
+                "method": "GET",
+                "path": "/api/internal/idp/v1/customer-profile"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "body": {
+                      "UCIC": "1234567894",
+                      "customerType": "GENERAL",
+                      "customerTypeDesc": "Individual-General Public",
+                      "residentialStatus": "RI",
+                      "email": "pawan.bhole_tho@idfcbank.com",
+                      "phone": "919029999311",
+                      "mobile": "919029999311",
+                      "name": {
+                          "title": "Mr.",
+                          "firstName": "JOSEPH CLIFFORD",
+                          "middleName": "SEBASTIAN",
+                          "lastName": "DSOUZA"
+                      },
+                      "dateOfBirth": "1962-09-08",
+                      "makerId": "",
+                      "permanentAddress": {
+                          "line1": "S/O Diego Cajetan Alfredo Dsouza,702 QUI",
+                          "line2": "ESCENT HEIGHTS,MINDSPACE OFF LINK ROAD,M",
+                          "line3": "ALAD,Malad West",
+                          "line4": "Mumbai",
+                          "pinCode": "400064",
+                          "city": { "name": "Mumbai" },
+                          "state": { "name": "MAHARASHTRA", "code": "60" },
+                          "country": { "name": "INDIA", "code": "IN" }
+                      },
+                      "communicationAddress": {
+                          "line1": "S/O Diego Cajetan Alfredo Dsouza,702 QUI",
+                          "line2": "ESCENT HEIGHTS,MINDSPACE OFF LINK ROAD,M",
+                          "line3": "ALAD,Malad West",
+                          "line4": "Mumbai",
+                          "pinCode": "400064",
+                          "city": { "name": "Mumbai" },
+                          "state": { "name": "MAHARASHTRA", "code": "60" },
+                          "country": { "name": "INDIA", "code": "IN" }
+                      },
+                      "mothersMaidenName": "Maria",
+                      "nationality": "IN",
+                      "pan": "",
+                      "aadhar": "220135558255",
+                      "gender": "Male",
+                      "employerName": "",
+                      "occupationType": "Salaried",
+                      "maritalStatus": "Married",
+                      "relations": [
+                          {
+                          "ucic": "1000120911",
+                          "relationId": "",
+                          "individualCorporateFlag": "I",
+                          "companyName": "",
+                          "isPrimary": ""
+                          }
+                      ],
+                      "fatherOrSpouseName": "",
+                      "fatherOrSpouseFlag": "",
+                      "individualCorporateFlag": "I"
+                      }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
